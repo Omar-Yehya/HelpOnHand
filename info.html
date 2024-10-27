@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-   
+    <title>Inventory</title>
 </head>
 <body>
-    <div class="top-buttons">
-        <button class="hamburger">&#9776;</button>
-        <ul class="menu">
-            <li><button> Dealer Sevice</button></li>
-            <li><button> Main</button></li>
-            <li><button> Dealer Body</button></li>
-            <li><button> Customer Service</button></li>
-            <li><button> Customer body</button></li>
-
-
-         </ul>
-
-
-
-
-
-
-
-
+    <div id="main-container">
+        <div id="top-panel">
+            <!-- Added the top-buttons section -->
+            <div class="top-buttons">
+                <button class="hamburger">&#9776;</button>
+                <ul class="menu">
+                    <li><button>Dealer Service</button></li>
+                    <li><button>Main</button></li>
+                    <li><button>Dealer Body</button></li>
+                    <li><button>Customer Service</button></li>
+                    <li><button>Customer body</button></li>
+                </ul>
+            </div>
+            <!-- ... existing top panel content ... -->
+        </div>
+        <div id="content-wrapper">
+            <div id="left-panel">
+                <!-- Placeholder for future left panel content -->
+            </div>
+            <div id="car-rows">
+                <div class="car-entry">
+                    <div class="car-row">
+                        <img src="pictures/red_tesla_model3.webp" alt="Car 1" class="car-image">
+                        <div class="car-info">
+                            <span class="car-detail">Tesla</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Model 3</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">2023</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Performance</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Red</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Location: Palos Hills</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Price: $50,000</span>
+                        </div>
+                    </div>
+                    <div class="car-info-box">Car Info 1</div>
+                    <button class="alert-button">Alerts</button>
+                </div>
+                <div class="car-entry">
+                    <div class="car-row">
+                        <img src="pictures/bmwred.webp" alt="Car 2" class="car-image">
+                        
+                        <div class="car-info">
+                            <span class="car-detail">BMW</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">7 Series </span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">2024</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">760i xDrive</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Red</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Location: Palos Hills</span>
+                            <span class="divider">|</span>
+                            <span class="car-detail">Price: $50,000</span>
+                        </div>
+                    </div>
+                    <div class="car-info-box">Car Info 2</div>
+                    <button class="alert-button">Alerts</button>
+                </div>
+                <!-- Repeat for other cars -->
+            </div>
+        </div>
     </div>
-   
+    
+    <!-- Added the JavaScript file reference -->
     <script src="cool-buttons.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
