@@ -65,10 +65,16 @@ body {
 
 /* Content Layout */
 #content-wrapper {
-    flex-grow: 1;
     display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;            /* Full width */
+    max-width: 1400px;       /* Limit max width */
+    margin: 0 auto;          /* Center the content-wrapper */
+    align-items: stretch;    /* Ensure both panels align vertically */
+    justify-content: flex-start; /* Align items from the left */
+}
+#main-container, #content-wrapper {
+    margin: 0;
+    padding: 0;
 }
 
 /* ... rest of your existing car-related styles ... */
@@ -86,9 +92,12 @@ body {
 }
 
 #left-panel {
-    width: 250px; /* Adjust as needed */
-    background-color: #e0e0e0; /* Temporary color for visibility */
+    width: 250px;           /* Fixed width */
+    background-color: #e0e0e0; /* Visible background */
+    min-height: 100vh;       /* Make it stretch to full height */
+    flex-shrink: 0;          /* Prevent shrinking on large screens */
 }
+
 
 #car-rows {
     flex-grow: 1;
@@ -215,6 +224,19 @@ body {
 
     /* ... rest of your existing mobile styles ... */
 }
+
+
+@media screen and (min-width: 1400px) {
+    #left-panel {
+        width: 200px; /* Reduce width for very large screens */
+    }
+
+    #content-wrapper {
+        justify-content: flex-start;  /* Keep everything aligned to the left */
+        margin-left: 0; /* Ensure it stays flush to the left */
+    }
+}
+
 
 /* Keep your existing small screen media query */
 @media screen and (max-width: 480px) {
