@@ -10,23 +10,39 @@
     <div id="main-container">
         <div id="top-panel">
             <!-- Added the top-buttons section -->
+            <!-- data filter is for when the user clicks dealer body they only see dealer body cars -->
             <div class="top-buttons">
-                <button class="hamburger" aria-label="Menu">&#9776;</button>
-                <nav class="menu">
-                    <ul>
-                        <!-- Using buttons is actually correct here since they're filtering content -->
-                        <li><button class="filter-button" data-filter="all">Main</button></li>
-                        <li><button class="filter-button" data-filter="dealer-service">Dealer Service</button></li>
-                        <li><button class="filter-button" data-filter="dealer-body">Dealer Body</button></li>
-                        <li><button class="filter-button" data-filter="customer-service">Customer Service</button></li>
-                        <li><button class="filter-button" data-filter="customer-body">Customer Body</button></li>
-                    </ul>
-                </nav>
+                <button class="hamburger">&#9776;</button>
+                <ul class="menu">
+                    <li><button class="filter-button" data-filter="all">Main</button></li>
+                    <li><button class="filter-button" data-filter="dealer-service">Dealer Service</button></li>
+                    <li><button class="filter-button" data-filter="dealer-body">Dealer Body</button></li>
+                    <li><button class="filter-button" data-filter="customer-service">Customer Service</button></li>
+                    <li><button class="filter-button" data-filter="customer-body">Customer body</button></li>
+                </ul>
             </div>
             <!-- ... existing top panel content ... -->
         </div>
+
+    
+
+
         <div id="content-wrapper">
             <div id="left-panel">
+                <div class="admin-controls">
+                    <button class="admin-button add-vehicle">
+                        <span class="button-icon">+</span>
+                        Add Vehicle
+                    </button>
+                    <button class="admin-button remove-vehicle">
+                        <span class="button-icon">-</span>
+                        Remove Vehicle
+                    </button>
+                    <button class="admin-button settings">
+                        <span class="button-icon">⚙️</span>
+                        Settings
+                    </button>
+                </div>
                 <!-- Placeholder for future left panel content -->
             </div>
             <div id="car-rows">
