@@ -11,14 +11,17 @@
         <div id="top-panel">
             <!-- Added the top-buttons section -->
             <div class="top-buttons">
-                <button class="hamburger">&#9776;</button>
-                <ul class="menu">
-                    <li><button>Dealer Service</button></li>
-                    <li><button>Main</button></li>
-                    <li><button>Dealer Body</button></li>
-                    <li><button>Customer Service</button></li>
-                    <li><button>Customer body</button></li>
-                </ul>
+                <button class="hamburger" aria-label="Menu">&#9776;</button>
+                <nav class="menu">
+                    <ul>
+                        <!-- Using buttons is actually correct here since they're filtering content -->
+                        <li><button class="filter-button" data-filter="all">Main</button></li>
+                        <li><button class="filter-button" data-filter="dealer-service">Dealer Service</button></li>
+                        <li><button class="filter-button" data-filter="dealer-body">Dealer Body</button></li>
+                        <li><button class="filter-button" data-filter="customer-service">Customer Service</button></li>
+                        <li><button class="filter-button" data-filter="customer-body">Customer Body</button></li>
+                    </ul>
+                </nav>
             </div>
             <!-- ... existing top panel content ... -->
         </div>
