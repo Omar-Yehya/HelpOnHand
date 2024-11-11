@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-   
+    <title>Inventory</title>
 </head>
 <body>
-    <div class="top-buttons">
-        <button class="hamburger">&#9776;</button>
-        <ul class="menu">
-            <li><button> Dealer Sevice</button></li>
-            <li><button> Main</button></li>
-            <li><button> Dealer Body</button></li>
-            <li><button> Customer Service</button></li>
-            <li><button> Customer body</button></li>
+    <div id="main-container">
+        <div id="top-panel">
+            <!-- Added the top-buttons section -->
+            <!-- data filter is for when the user clicks dealer body they only see dealer body cars -->
+            <div class="top-buttons">
+                <button class="hamburger">&#9776;</button>
+                <ul class="menu">
+                    <li><button class="filter-button" data-filter="all">Main</button></li>
+                    <li><button class="filter-button" data-filter="dealer-service">Dealer Service</button></li>
+                    <li><button class="filter-button" data-filter="dealer-body">Dealer Body</button></li>
+                    <li><button class="filter-button" data-filter="customer-service">Customer Service</button></li>
+                    <li><button class="filter-button" data-filter="customer-body">Customer body</button></li>
+                </ul>
+            </div>
+            <!-- ... existing top panel content ... -->
+        </div>
+
+    
 
 
-         </ul>
-
-
-
-
-
-
-
-
+        <div id="content-wrapper">
+            <div id="left-panel">
+                <div class="admin-controls">
+                    <button class="admin-button add-vehicle">
+                        <span class="button-icon">+</span>
+                        Add Vehicle
+                    </button>
+                    <button class="admin-button remove-vehicle">
+                        <span class="button-icon">-</span>
+                        Remove Vehicle
+                    </button>
+                    <button class="admin-button settings">
+                        <span class="button-icon">⚙️</span>
+                        Settings
+                    </button>
+                </div>
+                <!-- Placeholder for future left panel content -->
+            </div>
+           
+            <div id="car-rows">
+                <template id="car-template">
+                    <div class="car-entry">
+                        <div class="car-row">
+                            <img src="" alt="Car Image" class="car-image">
+                            <div class="car-info">
+                                <span class="car-detail make"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail model"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail year"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail trim"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail color"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail location"></span>
+                                <span class="divider">|</span>
+                                <span class="car-detail price"></span>
+                            </div>
+                        </div>
+                    <div class="car-info-box">Car Info</div>
+                    <button class="alert-button">Alerts</button>
+                    </div>
+                
+                </template>
+            </div>
+        </div>
     </div>
-   
+    
+    <div class="modal" id="add-vehicle-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Vehicle</h2>
+            <form id="vehicle-form">
+                <div class="form-group">
+                    <label for="make">Make:</label>
+                    <input type="text" id="make" >
+                </div>
+                <div class="form-group">
+                    <label for="model">Model:</label>
+                    <input type="text" id="model" >
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" >
+                </div>
+                <div class="form-group">
+                    <label for="trim">Trim:</label>
+                    <input type="text" id="trim" >
+                </div>
+                <div class="form-group">
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" >
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" >
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="text" id="price" >
+                </div>
+                <button type="submit" class="submit-btn">Add Vehicle</button>
+            </form>
+        </div>
+    </div>
+    <!-- Added the JavaScript file reference -->
     <script src="cool-buttons.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
